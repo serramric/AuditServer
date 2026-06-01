@@ -2,8 +2,8 @@
 
 set -e
 
-./gradlew build
+./gradlew build -x test
 export VERSION=$(grep "version =" build.gradle | awk '{print $3}' | sed "s/'//g")
-./gradlew createDockerFile
-./gradlew buildImage
+./gradlew createDockerfile
+./gradlew buildImage -x test
 

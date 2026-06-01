@@ -65,7 +65,7 @@ task createDockerfile(type: Dockerfile) {
     group = 'docker'
     description = 'Construye el dockerfile del contenedor del servicio'
     destFile = project.file('build/docker/Dockerfile')
-    from 'openjdk:17-alpine'  
+    from 'amazoncorretto:17-alpine'  
    // copyFile 'build/libs/auditserver-0.0.1-SNAPSHOT.jar', '/app/auditserver.jar'
     copyFile 'auditserver-0.0.1-SNAPSHOT.jar', '/app/auditserver.jar'
     entryPoint 'java'

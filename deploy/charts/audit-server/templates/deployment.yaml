@@ -47,6 +47,10 @@ spec:
             httpGet:
               path: /readyz
               port: http
+            initialDelaySeconds: 30
+            timeoutSeconds: 20
+            periodSeconds: 15
+            failureThreshold: 6
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:

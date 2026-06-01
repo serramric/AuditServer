@@ -11,7 +11,7 @@ image:
   tag: ""
 
 config:
-  healthzGithubRepo: MIT-FS/AuditServer
+  healthzGithubRepo: MIT-FS/Audit4Improve-API
   #githubOauth: 
   #githubLogin:
 
